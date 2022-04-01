@@ -21,8 +21,6 @@ namespace WebApiDemo
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             var services = context.Services;
-
-            services.AddTransient<HelloAbpService>();
             services.AddControllers();
 
             //base.ConfigureServices(context);
