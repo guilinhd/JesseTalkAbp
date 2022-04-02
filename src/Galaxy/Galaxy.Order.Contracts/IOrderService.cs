@@ -12,6 +12,6 @@ namespace Galaxy.Order.Contracts
     {
         Task<OrderDto> CreateAsync(OrderDto orderDto);
 
-        Task<OrderDto> FindAsync(int id);
+        Task<OrderDto> GetAsync(int id);
     }
 }
