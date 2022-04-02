@@ -5,7 +5,7 @@ using Volo.Abp.Modularity;
 
 namespace Galaxy.Order
 {
-    public class GalaxyProductModule : AbpModule
+    public class GalaxyOrderModule : AbpModule
     {
     }
 }
