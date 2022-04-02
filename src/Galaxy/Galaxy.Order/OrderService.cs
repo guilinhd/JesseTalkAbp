@@ -31,7 +31,7 @@ namespace Galaxy.Order
             var task = await Task.Run(() =>
             {
                 Thread.Sleep(100);
-                return new OrderDto() { Id = id,  Products = items };
+                return new OrderDto() { Id = id, Name = "Booking",  Products = items };
             });
             return task;
         }
