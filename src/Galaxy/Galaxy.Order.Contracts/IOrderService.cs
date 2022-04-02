@@ -8,7 +8,7 @@ using Galaxy.Order.Contracts.Models.Dtos;
 
 namespace Galaxy.Order.Contracts
 {
-    public interface IOrder : IApplicationService
+    public interface IOrderService : IApplicationService
     {
         Task<OrderDto> CreateAsync(OrderDto orderDto);
 

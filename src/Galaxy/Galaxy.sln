@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.Product", "Galaxy.Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.Order.Contracts", "Galaxy.Order.Contracts\Galaxy.Order.Contracts.csproj", "{24CE2004-4698-4EF3-AA97-E699E452677C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.Order", "Galaxy.Order\Galaxy.Order.csproj", "{68BB0A2A-8CA4-423B-B0D7-13F86FBF5191}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{24CE2004-4698-4EF3-AA97-E699E452677C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24CE2004-4698-4EF3-AA97-E699E452677C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24CE2004-4698-4EF3-AA97-E699E452677C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68BB0A2A-8CA4-423B-B0D7-13F86FBF5191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68BB0A2A-8CA4-423B-B0D7-13F86FBF5191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68BB0A2A-8CA4-423B-B0D7-13F86FBF5191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68BB0A2A-8CA4-423B-B0D7-13F86FBF5191}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
