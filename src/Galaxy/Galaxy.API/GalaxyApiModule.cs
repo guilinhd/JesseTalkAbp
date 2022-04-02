@@ -40,15 +40,21 @@ namespace Galaxy.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(options =>
+                {
+                    options.SwaggerEndpoint("/swagger/v1/swagger.json", "Galaxy API");
+
+                });
             }
 
             app.UseRouting();
 
-            app.UseSwagger();
-            app.UseSwaggerUI(options =>
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Galaxy API");
-                
+                endpoints.MapControllers();
             });
         }
 
