@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Modularity;
 
-namespace LoanSample.Domain
+namespace LoanSample.Customer.Domain
 {
     public class LoanSampleDomainModule : AbpModule
     {

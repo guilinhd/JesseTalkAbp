@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanSample.Domain", "LoanSample.Domain\LoanSample.Domain.csproj", "{0B487351-B447-4BFA-9944-C28892ADF5AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanSample.Customer.Domain", "LoanSample.Domain\LoanSample.Customer.Domain.csproj", "{0B487351-B447-4BFA-9944-C28892ADF5AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanSample.Customer.Application.Contracts", "LoanSample.Customer.Application.Contracts\LoanSample.Customer.Application.Contracts.csproj", "{BE185967-83DE-42B4-9BE8-286AC4612452}"
 EndProject

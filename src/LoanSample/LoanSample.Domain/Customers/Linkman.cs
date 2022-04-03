@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Domain.Entities;
 
-namespace LoanSample.Domain.Customers
+namespace LoanSample.Customer.Domain.Customers
 {
     public class Linkman : Entity<Guid>
     {
