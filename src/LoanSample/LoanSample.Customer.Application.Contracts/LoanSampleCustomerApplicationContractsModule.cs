@@ -7,7 +7,7 @@ using Volo.Abp.Modularity;
 
 namespace LoanSample.Customer.Application.Contracts
 {
-    class LoanSampleCustomerApplicationContractsModule : AbpModule
+    public class LoanSampleCustomerApplicationContractsModule : AbpModule
     {
     }
 }

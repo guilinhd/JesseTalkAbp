@@ -8,6 +8,9 @@ namespace LoanSample.Customer.Application.Profile
         {
             CreateMap<CustomerDto, Domain.Customers.Customer>().ReverseMap();
             CreateMap<Domain.Customers.Customer, CustomerDto>().ReverseMap();
+
+            CreateMap<LinkmanDto, Domain.Customers.Linkman>().ReverseMap();
+            CreateMap<Domain.Customers.Linkman, LinkmanDto>().ReverseMap();
         }
     }
 }
