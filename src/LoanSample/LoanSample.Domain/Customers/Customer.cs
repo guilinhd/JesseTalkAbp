@@ -19,7 +19,7 @@ namespace LoanSample.Domain.Customers
 
         public ReadOnlyCollection<Linkman> Linkman()
         {
-            return linkman.AsReadOnly();
+            return _linkman.AsReadOnly();
         }
 
         public void AddLinkman(Linkman linkman)
