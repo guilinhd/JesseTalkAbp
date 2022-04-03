@@ -14,9 +14,8 @@ namespace LoanSample.Customer.Application
     [DependsOn(
         typeof(AbpAutoMapperModule)
         )]
-
     [DependsOn(
-        typeof(LoanSampleDomainModule),
+        typeof(LoanSampleCustomerDomainModule),
         typeof(LoanSampleCustomerApplicationContractsModule)
         )]
     public class LoanSampleCustomerApplicationModule : AbpModule

@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanSample.Customer.Applica
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanSample.Customer.Application", "LoanSample.Customer.Application\LoanSample.Customer.Application.csproj", "{02CE3F85-72D3-4236-A72D-693A2BEA64D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanSample.Customer.API", "LoanSample.Customer.API\LoanSample.Customer.API.csproj", "{078C203E-A5E9-4D66-8386-0CF6979AE682}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{02CE3F85-72D3-4236-A72D-693A2BEA64D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02CE3F85-72D3-4236-A72D-693A2BEA64D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02CE3F85-72D3-4236-A72D-693A2BEA64D9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{078C203E-A5E9-4D66-8386-0CF6979AE682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{078C203E-A5E9-4D66-8386-0CF6979AE682}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{078C203E-A5E9-4D66-8386-0CF6979AE682}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{078C203E-A5E9-4D66-8386-0CF6979AE682}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

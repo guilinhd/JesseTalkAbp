@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Builder;
 using Volo.Abp.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
+
 namespace LoanSample.Customer.API
 {
     [DependsOn(
@@ -19,15 +20,15 @@ namespace LoanSample.Customer.API
         typeof(AbpAutofacModule)
         )]
 
-    [DependsOn(typeof(LoanSampleCustomerApplicationModule))]
+    //[DependsOn(typeof(LoanSampleCustomerApplicationModule))]
 
     public class LoanSampleCustomerAPIModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            Configure<AbpAspNetCoreMvcOptions>(options => {
-                options.ConventionalControllers.Create(typeof(LoanSampleCustomerApplicationModule).Assembly);
-            });
+            //Configure<AbpAspNetCoreMvcOptions>(options => {
+            //    options.ConventionalControllers.Create(typeof(LoanSampleCustomerApplicationModule).Assembly);
+            //});
 
             ConfigureSwaggerServices(context.Services);
         }
@@ -43,27 +44,21 @@ namespace LoanSample.Customer.API
                 app.UseSwagger();
                 app.UseSwaggerUI(options =>
                 {
-
                     options.SwaggerEndpoint("/swagger/v1/swagger.json", "LoanSample.Customer.API");
                 });
             }
 
             app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            
+            
         }
 
         private void ConfigureSwaggerServices(IServiceCollection services)
         {
             services.AddSwaggerGen(options => {
-                options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo() { Title = "LoanSample.Customer.API", Description = "V1.0" });
-                options.DocInclusionPredicate((doc, description) => true);
-                options.CustomSchemaIds(type => type.FullName);
+                options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo() { Title = "LoanSample.Customer.API", Description = "v1.0" });
+                //options.DocInclusionPredicate((doc, description) => true);
+                //options.CustomSchemaIds(type => type.FullName);
             });
         }
     }
