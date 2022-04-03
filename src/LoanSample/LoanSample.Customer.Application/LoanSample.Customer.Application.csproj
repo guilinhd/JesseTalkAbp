@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Ddd.Application" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LoanSample.Customer.Application.Contracts\LoanSample.Customer.Application.Contracts.csproj" />
+    <ProjectReference Include="..\LoanSample.Domain\LoanSample.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
