@@ -7,13 +7,15 @@ using Volo.Abp;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using LoanDemo.Customer.Application;
+using LoanDemo.Customer.EntityFrameworkCore;
 
 namespace LoanDemo.Customer.Api
 {
     [DependsOn(
         typeof(AbpAspNetCoreMvcModule),
         typeof(AbpAutofacModule),
-        typeof(LoanDemoCustomerApplicationModule)
+        typeof(LoanDemoCustomerApplicationModule),
+        typeof(LoanDemoCustomerEntityFrameworkCoreModule)
         )]
     public class LoanDemoCustomerApiModule : AbpModule
     {
