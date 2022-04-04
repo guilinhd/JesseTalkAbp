@@ -6,12 +6,14 @@ using Volo.Abp.Autofac;
 using Volo.Abp;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using LoanDemo.Customer.Application;
 
 namespace LoanDemo.Customer.Api
 {
     [DependsOn(
         typeof(AbpAspNetCoreMvcModule),
-        typeof(AbpAutofacModule)
+        typeof(AbpAutofacModule),
+        typeof(LoanDemoCustomerApplicationModule)
         )]
     public class LoanDemoCustomerApiModule : AbpModule
     {
@@ -19,7 +21,12 @@ namespace LoanDemo.Customer.Api
         {
             var services = context.Services;
 
-            services.AddControllers();
+            //services.AddControllers();
+
+            Configure<AbpAspNetCoreMvcOptions>(options => {
+                options.ConventionalControllers.Create(typeof(LoanDemoCustomerApplicationModule).Assembly);
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LoanDemo.Customer.Api", Version = "v1" });
