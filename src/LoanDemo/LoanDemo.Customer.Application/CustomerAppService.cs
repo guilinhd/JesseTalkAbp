@@ -6,24 +6,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
+using Volo.Abp.Domain.Repositories;
+using Volo.Abp.Uow;
 
 namespace LoanDemo.Customer.Application
 {
     public class CustomerAppService : ApplicationService, ICustomerAppService
     {
-        public Task<CustomerDto> AddLinkman(Guid customerId, LinkmanDto linkmanDto)
+        private readonly IRepository<Domain.Customers.Customer> _repository;
+        private readonly IUnitOfWorkManager _unitOfWorkManager;
+
+        public async Task<CustomerDto> AddLinkman(Guid customerId, LinkmanDto linkmanDto)
         {
-            throw new NotImplementedException();
+            var linkman = ObjectMapper.Map<LinkmanDto, Domain.Customers.Linkman>(linkmanDto);
+
+            var customer = await _repository.GetAsync(c => c.Id == customerId);
+            customer.AddLinkman(linkman);
+
+            using (var unitWork = _unitOfWorkManager.Begin())
+            {
+                var result = await _repository.UpdateAsync(customer);
+                await unitWork.CompleteAsync();
+
+                return ObjectMapper.Map<Domain.Customers.Customer, CustomerDto>(result);
+            }
         }
 
-        public Task<CustomerDto> GetAsync(Guid id)
+        public async Task<CustomerDto> GetAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var customer = await _repository.GetAsync(c => c.Id == id);
+
+            return ObjectMapper.Map<Domain.Customers.Customer, CustomerDto>(customer);
         }
 
-        public Task<List<CustomerDto>> GetListAsync()
+        public async Task<List<CustomerDto>> GetListAsync()
         {
-            throw new NotImplementedException();
+            var customers = await _repository.GetListAsync();
+
+            return ObjectMapper.Map<List<Domain.Customers.Customer>, List<CustomerDto>>(customers);
         }
     }
 }
