@@ -18,15 +18,15 @@ namespace LoanDemo.Customer.Domain.Customers
 
         public string IdNo { get; set; }
 
-        private List<Linkman> Linkmen = new List<Linkman>();
-        public ReadOnlyCollection<Linkman> linkman()
+        private List<Linkman> _linkmen = new List<Linkman>();
+        public ReadOnlyCollection<Linkman> Linkmen()
         {
-            return Linkmen.AsReadOnly();
+            return _linkmen.AsReadOnly();
         }
 
         public void AddLinkman(Linkman linkman)
         {
-            Linkmen.Add(linkman);
+            _linkmen.Add(linkman);
         }
     }
 
