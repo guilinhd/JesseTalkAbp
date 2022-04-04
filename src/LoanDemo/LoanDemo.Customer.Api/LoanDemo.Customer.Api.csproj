@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LoanDemo.Customer.Application\LoanDemo.Customer.Application.csproj" />
+    <ProjectReference Include="..\LoanDemo.Customer.EntityFrameworkCore\LoanDemo.Customer.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
 </Project>
