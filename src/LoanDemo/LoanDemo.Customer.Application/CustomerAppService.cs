@@ -23,10 +23,10 @@ namespace LoanDemo.Customer.Application
             var customer = await _repository.GetAsync(c => c.Id == customerId);
             customer.AddLinkman(linkman);
 
-            using (var unitWork = _unitOfWorkManager.Begin())
+            using (var uow = _unitOfWorkManager.Begin())
             {
-                var result = await _repository.UpdateAsync(customer);
-                await unitWork.CompleteAsync();
+                var result = await _repository.UpdateAsync(customer, false);
+                await uow.CompleteAsync();
 
                 return ObjectMapper.Map<Domain.Customers.Customer, CustomerDto>(result);
             }
