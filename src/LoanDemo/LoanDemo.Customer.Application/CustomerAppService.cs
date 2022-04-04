@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
@@ -15,6 +16,15 @@ namespace LoanDemo.Customer.Application
     {
         private readonly IRepository<Domain.Customers.Customer> _repository;
         private readonly IUnitOfWorkManager _unitOfWorkManager;
+
+        public CustomerAppService(
+            IRepository<Domain.Customers.Customer> repository,
+            IUnitOfWorkManager unitOfWorkManager)
+        {
+            _repository = repository;
+            _unitOfWorkManager = unitOfWorkManager;
+        }
+
 
         public async Task<CustomerDto> AddLinkman(Guid customerId, LinkmanDto linkmanDto)
         {
@@ -35,14 +45,12 @@ namespace LoanDemo.Customer.Application
         public async Task<CustomerDto> GetAsync(Guid id)
         {
             var customer = await _repository.GetAsync(c => c.Id == id);
-
             return ObjectMapper.Map<Domain.Customers.Customer, CustomerDto>(customer);
         }
 
         public async Task<List<CustomerDto>> GetListAsync()
         {
             var customers = await _repository.GetListAsync();
-
             return ObjectMapper.Map<List<Domain.Customers.Customer>, List<CustomerDto>>(customers);
         }
     }

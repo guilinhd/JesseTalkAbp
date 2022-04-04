@@ -8,6 +8,7 @@ namespace LoanDemo.Customer.Application.Contracts.Model.Dtos
 {
     public class CustomerDto
     {
+        public Guid Id { get; set; }
         public string Name { get; set; }
 
         public string Phone { get; set; }
@@ -16,12 +17,13 @@ namespace LoanDemo.Customer.Application.Contracts.Model.Dtos
 
         public string IdNo { get; set; }
 
-        public List<LinkmanDto> linkmen { get; set; }
+        public List<LinkmanDto> Linkmen { get; set; }
 
     }
 
     public class LinkmanDto
     {
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
         public string IdNo { get; set; }
