@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanDemo.Customer.Api", "Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanDemo.Customer.Application", "LoanDemo.Customer.Application\LoanDemo.Customer.Application.csproj", "{62923720-49A0-4BFE-910F-F3E15062D053}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanDemo.Customer.Application.Contracts", "LoanDemo.Customer.Application.Contracts\LoanDemo.Customer.Application.Contracts.csproj", "{52BF2417-4F64-49BC-B4DA-D0E611D8B12F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{62923720-49A0-4BFE-910F-F3E15062D053}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62923720-49A0-4BFE-910F-F3E15062D053}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62923720-49A0-4BFE-910F-F3E15062D053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52BF2417-4F64-49BC-B4DA-D0E611D8B12F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52BF2417-4F64-49BC-B4DA-D0E611D8B12F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52BF2417-4F64-49BC-B4DA-D0E611D8B12F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52BF2417-4F64-49BC-B4DA-D0E611D8B12F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
