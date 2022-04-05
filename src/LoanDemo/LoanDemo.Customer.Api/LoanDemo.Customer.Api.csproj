@@ -8,10 +8,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
     <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="4.0.0" />
     <PackageReference Include="Volo.Abp.Autofac" Version="4.0.0" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="4.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\LoanDemo.Customer.Application\LoanDemo.Customer.Application.csproj" />
+    <ProjectReference Include="..\LoanDemo.Customer.EntityFrameworkCore.Migration\LoanDemo.Customer.EntityFrameworkCore.Migration.csproj" />
     <ProjectReference Include="..\LoanDemo.Customer.EntityFrameworkCore\LoanDemo.Customer.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
