@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanDemo.Customer.Api", "LoanDemo.Customer.Api\LoanDemo.Customer.Api.csproj", "{C8AEC2F8-B4C3-4727-BB32-EE04188ABB35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanDemo.Customer.Api", "LoanDemo.Customer.Api\LoanDemo.Customer.Api.csproj", "{C8AEC2F8-B4C3-4727-BB32-EE04188ABB35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanDemo.Customer.Application", "LoanDemo.Customer.Application\LoanDemo.Customer.Application.csproj", "{62923720-49A0-4BFE-910F-F3E15062D053}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanDemo.Customer.Application", "LoanDemo.Customer.Application\LoanDemo.Customer.Application.csproj", "{62923720-49A0-4BFE-910F-F3E15062D053}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanDemo.Customer.Application.Contracts", "LoanDemo.Customer.Application.Contracts\LoanDemo.Customer.Application.Contracts.csproj", "{52BF2417-4F64-49BC-B4DA-D0E611D8B12F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanDemo.Customer.Application.Contracts", "LoanDemo.Customer.Application.Contracts\LoanDemo.Customer.Application.Contracts.csproj", "{52BF2417-4F64-49BC-B4DA-D0E611D8B12F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanDemo.Customer.Domain", "LoanDemo.Customer.Domain\LoanDemo.Customer.Domain.csproj", "{3C8F79D9-1596-4A00-9DB0-E32234E181C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanDemo.Customer.Domain", "LoanDemo.Customer.Domain\LoanDemo.Customer.Domain.csproj", "{3C8F79D9-1596-4A00-9DB0-E32234E181C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanDemo.Customer.EntityFrameworkCore", "LoanDemo.Customer.EntityFrameworkCore\LoanDemo.Customer.EntityFrameworkCore.csproj", "{BD3419F6-9350-4987-BE5A-3BC34DA2A647}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanDemo.Customer.EntityFrameworkCore", "LoanDemo.Customer.EntityFrameworkCore\LoanDemo.Customer.EntityFrameworkCore.csproj", "{BD3419F6-9350-4987-BE5A-3BC34DA2A647}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanDemo.Customer.Migrator", "LoanDemo.Customer.Migrator\LoanDemo.Customer.Migrator.csproj", "{C580E396-4304-4F1A-8B52-22F29FB4B7E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{BD3419F6-9350-4987-BE5A-3BC34DA2A647}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD3419F6-9350-4987-BE5A-3BC34DA2A647}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD3419F6-9350-4987-BE5A-3BC34DA2A647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C580E396-4304-4F1A-8B52-22F29FB4B7E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C580E396-4304-4F1A-8B52-22F29FB4B7E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C580E396-4304-4F1A-8B52-22F29FB4B7E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C580E396-4304-4F1A-8B52-22F29FB4B7E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
