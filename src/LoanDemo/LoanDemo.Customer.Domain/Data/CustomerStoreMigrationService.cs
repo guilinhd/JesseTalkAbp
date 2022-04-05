@@ -18,13 +18,13 @@ namespace LoanDemo.Customer.Domain.Data
             _dbSchemaMigrator = dbSchemaMigrator;
         }
 
-        public async Task MigratorAsync()
+        public async Task MigrateAsync()
         {
 
             Logger.LogInformation("Started database migrations...");
             Logger.LogInformation("Migrating database schema...");
 
-            await _dbSchemaMigrator.MigratorAsync();
+            await _dbSchemaMigrator.MigrateAsync();
 
             Logger.LogInformation("Successfully completed database migrations.");
         }

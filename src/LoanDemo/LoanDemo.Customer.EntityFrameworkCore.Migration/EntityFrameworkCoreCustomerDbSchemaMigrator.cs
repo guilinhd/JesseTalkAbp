@@ -17,7 +17,7 @@ namespace LoanDemo.Customer.EntityFrameworkCore.Migration
             _dbContext = dbContext;
         }
 
-        public async Task MigratorAsync()
+        public async Task MigrateAsync()
         {
             await _dbContext.Database.MigrateAsync();
         }

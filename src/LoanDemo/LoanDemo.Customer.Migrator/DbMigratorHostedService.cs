@@ -1,23 +1,35 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Serilog;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Hosting;
+using Volo.Abp;
+using LoanDemo.Customer.Domain.Data;
 
 namespace LoanDemo.Customer.Migrator
 {
     public class DbMigratorHostedService : IHostedService
     {
-        public Task StartAsync(CancellationToken cancellationToken)
+        public async Task StartAsync(CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            using var application = AbpApplicationFactory.Create<LoanDemoCustomerMigratorModule>(options =>
+            {
+                options.UseAutofac();
+                options.Services.AddLogging(c => c.AddSerilog());
+            });
+            application.Initialize();
+
+            await application
+                .ServiceProvider
+                .GetRequiredService<CustomerStoreMigrationService>()
+                .MigrateAsync();
+
+            application.Shutdown();
         }
 
-        public Task StopAsync(CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
+        public Task StopAsync(CancellationToken cancellationToken) => Task.CompletedTask;
     }
 }

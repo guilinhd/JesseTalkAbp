@@ -8,6 +8,6 @@ namespace LoanDemo.Customer.Domain.Data
 {
     public interface ICustomerStoreSchemaMigrator
     {
-        Task MigratorAsync();
+        Task MigrateAsync();
     }
 }
